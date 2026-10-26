@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paint — interactive website design (practice build)</title>
+<meta name="description" content="Practice build: responsive, interactive landing page coded from a free Figma design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Иконки, которые повторяются на странице -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M3 12h17M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="check" viewBox="0 0 26 26"><circle cx="13" cy="13" r="11" fill="none" stroke="#F7B801" stroke-width="2"/><path d="M8 13.5l3.5 3.5L18 10" fill="none" stroke="#F7B801" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<!-- Первый экран -->
+<section class="s-hero">
+  <header class="nav">
+    <a href="#" class="logo" aria-label="Paint"><i></i><span>AINT</span></a>
+    <button class="lang" aria-label="Language: English">
+      <svg viewBox="0 0 60 40" width="40" height="27" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0 0l60 40M60 0L0 40" stroke="#fff" stroke-width="7"/><path d="M0 0l60 40M60 0L0 40" stroke="#C8102E" stroke-width="3"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="12"/><path d="M30 0v40M0 20h60" stroke="#C8102E" stroke-width="7"/></svg>
+      <span class="caret-down"></span>
+    </button>
+  </header>
+
+  <div class="hero-grid">
+    <img class="hero-img reveal" src="img/DrawKit Vector Illustration-1.svg" alt="Woman working on a laptop under a lamp" width="714" height="714">
+    <div class="hero-text">
+      <p class="eyebrow">Risus praesent vulputate.</p>
+      <h1 id="title" aria-label="Cursus Integer Consequat Tristique."><span class="ghost" aria-hidden="true">Cursus Integer<br>Consequat Tristique.</span><span class="typed" id="typed" aria-hidden="true"></span></h1>
+      <ul class="chips">
+        <li><svg><use href="#check"/></svg>Cursus Integer</li>
+        <li><svg><use href="#check"/></svg>Integer Consequat</li>
+        <li><svg><use href="#check"/></svg>Tellus Euismod Pellentesque</li>
+        <li><svg><use href="#check"/></svg>Aliquot Tristique</li>
+        <li><svg><use href="#check"/></svg>Pellentesque Tempus</li>
+        <li><svg><use href="#check"/></svg>Mauris Fermentum Praesent</li>
+      </ul>
+      <a href="#" class="btn btn-yellow">Lorem Ipsum <svg><use href="#arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- О нас -->
+<section class="s-about diag">
+  <div class="two-col">
+    <img class="side-img reveal" src="img/DrawKit Vector Illustration-2.svg" alt="Woman pointing at an online shop card" width="714" height="714">
+    <div class="text reveal">
+      <h2>Phasellus a vitae iaculis magna eleifend pulvinar velit odio.</h2>
+      <p class="lead"><a href="#">Vulputate et vulputate suspendisse natoque!</a></p>
+      <p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis vulputate et vulputate suspendisse natoque id tellus consectetur pulvinar et.</p>
+      <a href="#" class="btn btn-dark">Lorem Ipsum <svg><use href="#arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- Шаги и отзыв -->
+<section class="s-steps diag">
+  <div class="steps">
+    <div class="text reveal">
+      <p class="yellow">Quisque porttitor vitae vel amet neque scelerisque mattis. Consectetur nibh velit magna consectetur leo.</p>
+      <h2>Cursus Integer Conseq Aliquam Tristique.</h2>
+      <a href="#" class="btn btn-white">Lorem Ipsum <svg><use href="#arrow"/></svg></a>
+    </div>
+    <div class="cards">
+      <article class="card c1 reveal"><img src="img/Icon-Images.svg" alt="" width="60" height="60"><b class="num">1<i></i></b><h3>Phasellus Vitae</h3><p><strong>Quisque</strong>Porttitor Vitae Vel Amet</p></article>
+      <article class="card c2 reveal"><img src="img/Icon-Images (1).svg" alt="" width="50" height="50"><b class="num">2<i></i></b><h3>Iaculis Magna</h3><p><strong>Porttitor</strong>Neque Scelerisque Mattis.</p></article>
+      <article class="card c3 reveal"><img src="img/Icon-Images (2).svg" alt="" width="50" height="50"><b class="num">3<i></i></b><h3>Eleifend Pulvinar</h3><p><strong>Vitae</strong>Consectetur Nibh Velit</p></article>
+      <article class="card c4 reveal"><img src="img/Icon-Images (3).svg" alt="" width="50" height="50"><b class="num">4<i></i></b><h3>Velit Odio Phir</h3><p><strong>Ametneq</strong>Magna Consectetur Leo.</p></article>
+    </div>
+  </div>
+
+</section>
+
+<!-- Отзыв: фон за карточкой делится косой линией на тёмный и жёлтый -->
+<div class="review-wrap">
+  <div class="review reveal">
+    <img src="img/Rectangle 4200.png" alt="Portrait of Holly Davidson" width="472" height="472">
+    <div class="review-text">
+      <h2>What our customers thought?</h2>
+      <div class="quotes" id="quotes">
+        <blockquote class="quote active"><p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.</p><cite>Holly Davidson</cite></blockquote>
+        <blockquote class="quote"><p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.</p><cite>Holly Davidson</cite></blockquote>
+        <blockquote class="quote"><p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.</p><cite>Holly Davidson</cite></blockquote>
+      </div>
+      <div class="arrows">
+        <button id="prev" aria-label="Previous review" class="ar ar-left"><svg><use href="#arrow"/></svg></button>
+        <button id="next" aria-label="Next review" class="ar ar-right"><svg><use href="#arrow"/></svg></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Преимущества -->
+<section class="s-benefits">
+  <div class="two-col">
+    <img class="side-img reveal" src="img/DrawKit Vector Illustration-3.svg" alt="Woman shrugging between shop and payment cards" width="714" height="714">
+    <div class="text reveal">
+      <h2>Cursus Integer consequat Tristique.</h2>
+      <ul class="chips">
+        <li><svg><use href="#check"/></svg>Ac viverra sed risus praesent vulputate.</li>
+        <li><svg><use href="#check"/></svg>Euismod magna id purus eget nunc ligula.</li>
+        <li><svg><use href="#check"/></svg>Natoqu consectetur pulvinar.</li>
+        <li><svg><use href="#check"/></svg>Sollicitudin ornare tempus nulla varius pulvinar.</li>
+        <li><svg><use href="#check"/></svg>Varius pulvinar</li>
+        <li><svg><use href="#check"/></svg>Natoque id tellus consectetur</li>
+        <li><svg><use href="#check"/></svg>Vulputate et vulputate suspendisse</li>
+      </ul>
+      <a href="#" class="btn btn-dark">Lorem Ipsum <svg><use href="#arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- Вопросы и ответы -->
+<section class="s-faq diag">
+  <div class="faq-head reveal">
+    <h2>Phasellus a vitae iaculis magna.</h2>
+    <p>Phasellus a vitae iaculis magna eleifend pulvinar velit odio.</p>
+  </div>
+  <div class="faq">
+    <div class="item open reveal">
+      <button class="q" aria-expanded="true"><span>Quam vehicula faucibus amet lorem.</span><svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path class="h" d="M3 12h18"/><path class="v" d="M12 3v18"/></svg></button>
+      <div class="a"><div><p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis. Mauris fermentum praesent tellus euismod.</p></div></div>
+    </div>
+    <div class="item reveal">
+      <button class="q" aria-expanded="false"><span>Pellentesque tempus sed phasellus vel.</span><svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path class="h" d="M3 12h18"/><path class="v" d="M12 3v18"/></svg></button>
+      <div class="a"><div><p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.</p></div></div>
+    </div>
+    <div class="item reveal">
+      <button class="q" aria-expanded="false"><span>Mauris fermentum praesent tellus euismod pellentesque urna ac massa in.</span><svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path class="h" d="M3 12h18"/><path class="v" d="M12 3v18"/></svg></button>
+      <div class="a"><div><p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.</p></div></div>
+    </div>
+    <div class="item reveal">
+      <button class="q" aria-expanded="false"><span>Vulputate et vulputate suspendisse natoque id tellus consectetur pulvinar et.</span><svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path class="h" d="M3 12h18"/><path class="v" d="M12 3v18"/></svg></button>
+      <div class="a"><div><p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.</p></div></div>
+    </div>
+    <div class="item reveal">
+      <button class="q" aria-expanded="false"><span>Sollicitudin ornare tempus felis nulla varius pulvinar nibh viverra ornare.</span><svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path class="h" d="M3 12h18"/><path class="v" d="M12 3v18"/></svg></button>
+      <div class="a"><div><p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.</p></div></div>
+    </div>
+    <div class="item reveal">
+      <button class="q" aria-expanded="false"><span>Consectetur nibh velit magna consectetur leo.</span><svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path class="h" d="M3 12h18"/><path class="v" d="M12 3v18"/></svg></button>
+      <div class="a"><div><p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.</p></div></div>
+    </div>
+    <div class="item reveal">
+      <button class="q" aria-expanded="false"><span>Quisque porttitor vitae vel amet neque scelerisque mattis.</span><svg class="pm" viewBox="0 0 24 24" aria-hidden="true"><path class="h" d="M3 12h18"/><path class="v" d="M12 3v18"/></svg></button>
+      <div class="a"><div><p>Euismod magna id purus eget nunc ligula suspendisse dui netus. Condimentum blandit rutrum at mauris enim pulvinar duis etiam duis.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Призыв и подвал -->
+<section class="s-cta diag">
+  <div class="cta reveal">
+    <h2>Vulputate et pulvinar ethre Suspendisse tellus consecteur</h2>
+    <a href="#" class="btn btn-yellow">Lorem Ipsum <svg><use href="#arrow"/></svg></a>
+  </div>
+  <footer class="footer">
+    <span>Copyright © 2022 Lorem Ipsum.</span>
+    <span><a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a></span>
+  </footer>
+  <p class="credits">Practice build by Arina: the design was coded in HTML, CSS and JavaScript (animations added; logo and flag redrawn by me). Design: <a href="https://www.figma.com/community/file/1198413387972983198/freebie-interactive-website-mobile-responsive-designs">“Freebie: Interactive website &amp; mobile responsive designs”</a> by <a href="https://www.figma.com/@imzul">Imzul Design Agency</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
